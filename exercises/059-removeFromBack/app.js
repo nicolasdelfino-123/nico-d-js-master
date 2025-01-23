@@ -1,6 +1,5 @@
 function removeFromBack(arr) {
-    // your code here
-    
+  // your code here
 }
 
 let output = removeFromBack([1, 2, 3]);
