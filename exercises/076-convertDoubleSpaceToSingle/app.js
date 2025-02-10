@@ -1,6 +1,7 @@
 function convertDoubleSpaceToSingle(str) {
-    // your code here
-    
+  // your code here
+  let result = str.replaceAll("  ", " ");
+  return result;
 }
 
 let output = convertDoubleSpaceToSingle("string  with  double  spaces");
