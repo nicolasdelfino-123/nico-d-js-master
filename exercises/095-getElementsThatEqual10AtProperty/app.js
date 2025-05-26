@@ -1,7 +1,8 @@
 // Write your function here
 function getElementsThatEqual10AtProperty(obj, key) {
-  if (obj[key].length <= 0 || obj[key] !== 10 || !Array.isArray(obj[key])) {
+  if (Array.isArray(obj[key])) {
+    return obj[key].filter((element) => element === 10);
+  } else {
     return [];
   }
-  return obj[key] === 10;
 }
