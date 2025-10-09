@@ -1,15 +1,20 @@
 // Write your function here
-function computeAverageOfNumbers(array) {
-  let total = 0;
+/* const computeAverageOfNumbers = (array) => {
+    let total = 0
+    for (i = 0; i < array.length; i++) {
+        total += array[i]
 
-  for (let i = 0; i < array.length; i++) {
-    total += array[i];
-  }
-  if (array.length === 0) {
-    return 0;
-  }
-  let promedio = total / array.length;
-  return promedio;
+    } if (array.length === 0) {
+        return 0
+    }
+    const promedio = total / array.length
+    return promedio
+} */
+
+const computeAverageOfNumbers = (nums) => {
+    if (nums.length === 0) return 0;
+
+    const total = nums.reduce((acc, num) => acc + num, 0);
+    return total / nums.length
+
 }
-
-/* Escribe una función llamada computeAverageOfNumbers. Dado un array de números, computeAverageOfNumbers retorna su promedio. */

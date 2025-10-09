@@ -1,7 +1,6 @@
 function computeSquareRoot(num) {
   // your code here
-  let res = Math.sqrt(num);
-  return res;
+  return Math.sqrt(num)
 }
 
 let output = computeSquareRoot(9);
