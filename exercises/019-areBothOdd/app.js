@@ -1,4 +1,4 @@
 // Write your function here
-function areBothOdd(n1, n2) {
-  return n1 % 2 !== 0 && n2 % 2 !== 0;
+function areBothOdd(num1, num2) {
+  return num1 % 2 !== 0 && num2 % 2 !== 0
 }
