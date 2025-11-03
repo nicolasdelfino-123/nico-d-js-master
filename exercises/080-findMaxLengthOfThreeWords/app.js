@@ -1,4 +1,4 @@
 // Write your function here
-function findMaxLengthOfThreeWords(p1, p2, p3) {
-  return Math.max(p1.length, p2.length, p3.length);
+const findMaxLengthOfThreeWords = (w1, w2, w3) => {
+  return Math.max(w1.length, w2.length, w3.length)
 }

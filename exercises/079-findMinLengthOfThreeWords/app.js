@@ -1,4 +1,6 @@
 // Write your function here
-function findMinLengthOfThreeWords(palabra1, palabra2, palabra3) {
-  return Math.min(palabra1.length, palabra2.length, palabra3.length);
+const findMinLengthOfThreeWords = (word1, word2, word3) => {
+
+    return Math.min(word1.length, word2.length, word3.length)
+
 }

@@ -1,11 +1,11 @@
 // Write your function here
-function getIndexOf(car, str) {
-  if (!str.includes(car)) return -1;
+function getIndexOf(char, str) {
 
-  for (let i = 0; i < str.length; i++) {
-    let indice = str[i];
-    if (car === indice) {
-      return i;
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] === char) {
+            return i
+        }
+
     }
-  }
+    return -1
 }
