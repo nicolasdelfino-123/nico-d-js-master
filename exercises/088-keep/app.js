@@ -1,4 +1,4 @@
 // Write your function here
-function keep(array, ele) {
-  return array.filter((elem) => elem === ele);
+const keep = (arr, elem) => {
+    return arr.filter((iterando) => iterando === elem)
 }
