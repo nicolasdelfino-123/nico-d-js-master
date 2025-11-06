@@ -1,8 +1,9 @@
 // Write your function here
-function getElementsThatEqual10AtProperty(obj, key) {
-  if (Array.isArray(obj[key])) {
-    return obj[key].filter((element) => element === 10);
-  } else {
-    return [];
-  }
+const getElementsThatEqual10AtProperty = (obj, key) => {
+    if (!Array.isArray(obj[key]) || !obj.hasOwnProperty(key) || !obj[key]) {
+        return []
+    } else {
+        return obj[key].filter((ele) => ele === 10)
+
+    }
 }

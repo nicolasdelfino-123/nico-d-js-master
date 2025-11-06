@@ -1,8 +1,9 @@
 // Write your function here
 function getFirstElementOfProperty(obj, key) {
-  if (!obj.hasOwnProperty(key) || !Array.isArray(obj[key]) || obj[key].length === 0) {
+  if (!obj[key] || obj[key].length === 0 || !Array.isArray(obj[key])) {
     return undefined
-  }
-  return obj[key][0]
+  } else {
+    return obj[key][0]
 
+  }
 }
