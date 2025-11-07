@@ -1,17 +1,16 @@
 // Write your function here
-
 function getElementsLessThan100AtProperty(obj, key) {
-  if (!obj[key] || obj[key].length === 0 || !Array.isArray(obj[key])) {
-    return [];
-  } else {
-    let arr = obj[key];
-    let newA = [];
+    if (!obj[key] || obj[key].length == 0 || !Array.isArray(obj[key])) {
+        return []
+    }
 
-    arr.forEach((item) => {
-      if (item < 100) {
-        newA.push(item);
-      }
-    });
-    return newA;
-  }
+    let newArr = []
+    arr = obj[key]
+
+    arr.forEach((ele) => {
+        if (ele < 100) {
+            newArr.push(ele)
+        }
+    })
+    return newArr
 }

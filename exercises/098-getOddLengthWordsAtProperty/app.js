@@ -1,8 +1,9 @@
 // Write your function here
 function getOddLengthWordsAtProperty(obj, key) {
-  if (Array.isArray(obj[key])) {
-    return obj[key].filter((ele) => ele.length % 2 == 1);
+  if (!obj.hasOwnProperty(key) || !Array.isArray(obj[key]) || obj[key].length === 0) {
+    return []
   } else {
-    return [];
+    return obj[key].filter((ele) => ele.length % 2 !== 0)
   }
+
 }
