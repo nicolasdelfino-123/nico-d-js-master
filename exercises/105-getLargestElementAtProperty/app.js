@@ -1,19 +1,17 @@
 function getLargestElementAtProperty(obj, key) {
-    // your code here
-    if(!obj[key] || !Array.isArray(obj[key]) || obj[key].length === 0){
-      return []
-    } else{
-      let arr = obj[key]
-      let maximo = arr[0]
+  // your code here
+  if (!Array.isArray(obj[key]) || !obj[key] || obj[key].length < 1) {
+    return []
+  }
 
-      for(let i = 0; i < arr.length; i++) {
-        if(arr[i] > maximo){
-          maximo = arr[i]
-        }
-      }
-      return maximo
+  let maximo = -Infinity
+
+  for (let valor of obj[key]) {
+    if (valor > maximo) {
+      maximo = valor
     }
-    
+  }
+  return maximo
 }
 
 let obj = {

@@ -1,17 +1,16 @@
 function getSmallestElementAtProperty(obj, key) {
-    // your code here
-    
-    if(!obj[key] || !Array.isArray(obj[key]) || obj[key].length === 0){
-      return []
-    }else{
-      let menor = obj[key][0]
-      for(let i = 0; i < obj[key].length; i++){
-        if(menor < obj[key][i] ){
-           menor = obj[key][i]
-        }
-    }
-    return menor
-}
+  // your code here
+  if (!Array.isArray(obj[key]) || obj[key].length < 1 || !obj.hasOwnProperty(key)) {
+    return []
+  }
+
+  const mayor = Infinity;
+  let arrayFinal = obj[key].reduce((acc, ele) => ele < acc ? ele : acc, mayor)
+
+
+  return arrayFinal
+
+
 }
 
 let obj = {
