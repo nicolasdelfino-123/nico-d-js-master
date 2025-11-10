@@ -1,11 +1,5 @@
-function getEvenElementsAtProperty(obj, key) {
-    // your code here
-    if(!obj[key] || obj[key] % 2 == 1 || !Array.isArray(obj[key])){
-      return []
-    }else{
-      return obj[key].filter(ele => ele % 2 === 0) 
-    }
-}
+const getEvenElementsAtProperty = (obj, key) =>
+  Array.isArray(obj[key]) ? obj[key].reduce((a, n) => (n % 2 ? a : [...a, n]), []) : [];
 
 let obj = {
   key: [1000, 11, 50, 17]
