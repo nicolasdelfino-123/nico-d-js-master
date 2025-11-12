@@ -1,11 +1,10 @@
 function getElementOfArrayProperty(obj, key, index) {
     // your code here
-    if (!obj[key] || !Array.isArray(obj[key]) || !obj.hasOwnProperty(key) || indexOf(obj[key].length > obj[key].length)) {
+    if (!Array.isArray(obj[key]) || !obj[key] || obj[key].length < 1 || index < 0 || index >= obj[key].length) {
         return undefined
     }
 
-
-
+    return obj[key][index]
 }
 
 let obj = {
