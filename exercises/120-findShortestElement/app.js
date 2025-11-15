@@ -1,5 +1,10 @@
 function findShortestElement(arr) {
     // your code here
+    if (arr.length === 0) return ''
+
+    let ordenados = arr.sort((a, b) => a.length - b.length)
+    return ordenados[0]
+
 
 }
 
