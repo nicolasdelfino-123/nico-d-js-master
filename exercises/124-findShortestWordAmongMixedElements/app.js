@@ -1,15 +1,18 @@
 function findShortestWordAmongMixedElements(arr) {
     // your code here
+    if (arr.length === 0) {
+        return ""
+    }
+
+    let comparador = Infinity
     let resultado = ""
-    let comparador = 999999999999999
     for (let i = 0; i < arr.length; i++) {
-        if (typeof arr[i] === 'string') {
-            if (arr[i].length < comparador) {
-                comparador = arr[i].length
-                resultado = arr[i]
-            }
+        if (typeof arr[i] === 'string' && arr[i].length < comparador) {
+            resultado = arr[i]
+            comparador = arr[i].length
         }
     }
+
     return resultado
 
 }
