@@ -1,6 +1,16 @@
 function getElementsAfter(array, n) {
   // your code here
-  return array.filter((_, n) => n < n);
+  let result = []
+  let index = 0
+
+  for (let ele of array) {
+    if (index > n) {
+      result.push(ele)
+    }
+    index++
+  }
+
+  return result
 
 }
 

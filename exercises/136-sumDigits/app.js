@@ -1,16 +1,16 @@
 function sumDigits(num) {
     // your code here
-    let str = num.toString()
+    let numToString = num.toString().split("")
+    console.log(numToString)
 
-    let total = 0;
-    for (let i = 0; i < str.length; i++) {
-        if (i === 0 && str[i] === "-") {
-            total -= Number(str[i + 1])
-            i++
+    let total = 0
+    for (let i = 0; i < numToString.length; i++) {
+        if (i === 0 && numToString[i] === "-") {
+            total = total - Number(numToString[i + 1])
+
         } else {
-            total += Number(str[i])
+            total = total + Number(numToString[i])
         }
-
     }
     return total
 }

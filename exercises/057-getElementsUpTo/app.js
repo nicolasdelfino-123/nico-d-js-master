@@ -1,8 +1,12 @@
 function getElementsUpTo(array, n) {
   // your code here
-  const nuevo = array.slice(0, n)
-  return nuevo
 
+  return array.reduce((acc, ele, index) => {
+    if (index < n) {
+      acc.push(ele)
+    }
+    return acc
+  }, [])
 }
 
 let output = getElementsUpTo(['a', 'b', 'c', 'd', 'e'], 3)

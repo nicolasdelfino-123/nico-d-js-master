@@ -1,6 +1,12 @@
 function removeFromFront(arr) {
   // your code here
-  return arr.shift();
+  return arr.reduce((acc, ele, i) => {
+    if (i != 0) {
+      acc.push(ele)
+
+    }
+    return acc
+  }, [])
 }
 
 let output = removeFromFront([1, 2, 3]);

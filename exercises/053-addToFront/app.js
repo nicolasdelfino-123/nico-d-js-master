@@ -1,7 +1,6 @@
 function addToFront(arr, element) {
   // your code here
-  arr.unshift(element)
-  return arr
+  return [].concat(element, ...arr)
 
 }
 
