@@ -10,7 +10,6 @@ function removeNumbersLargerThan(num, obj) {
         if (obj[key] > num) {
             delete obj[key]
         }
-
     }
     return obj
 }

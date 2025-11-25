@@ -3,13 +3,22 @@ function getAllWords(str) {
     let array = []
     let string = ""
     for (let i = 0; i < str.length; i++) {
-        if (str[i] !== " ") {
-            string = ""
+
+        if (str[i] === " ") {
+            if (string.length > 0) {
+                array.push(string)
+                string = ""
+            }
+        } else {
+            string += str[i]
+
         }
-        string += str[i]
+    }
+    if (string.length > 0) {
+        array.push(string)
     }
 
-    array.push(string)
+    return array
 }
 
 let output = getAllWords('Radagast the Brown');
